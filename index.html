@@ -2,17 +2,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Etiqueta de Google Analytics -->
+ 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-18C0T8FRF6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag(){
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-18C0T8FRF6');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MiniShop, tienda virtual de accesorios y tecnología.">
+
     <title>MiniShop | Tienda Online</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <nav class="navbar">
             <h1>🛍️ MiniShop</h1>
+
             <div class="carrito">
                 🛒 Carrito: <span id="contador">0</span>
             </div>
@@ -21,6 +40,7 @@
         <div class="bienvenida">
             <h2>Bienvenido a MiniShop</h2>
             <p>Encuentra tus productos favoritos al mejor precio.</p>
+
             <a href="#catalogo" class="btn-explorar">
                 Explorar productos
             </a>
@@ -28,64 +48,107 @@
     </header>
 
     <main id="catalogo">
+
         <h2>Nuestros productos</h2>
+
         <p class="subtitulo">
             Calidad, tecnología y estilo en un solo lugar.
         </p>
 
         <section class="productos">
 
+            <!-- PRODUCTO 1: MOCHILA -->
             <article class="producto">
-                <img src="imagenes/mochila.jpg"
-                     alt="Mochila urbana negra">
+
+                <img
+                    src="imagenes/mochila.jpg"
+                    alt="Mochila urbana negra"
+                >
 
                 <h3>Mochila urbana</h3>
+
                 <p>Ideal para estudiar, trabajar y viajar.</p>
+
                 <h4>S/ 89.90</h4>
 
                 <button onclick="agregarCarrito('Mochila urbana', 89.90, 'MOCH-001')">
                     🛒 Agregar al carrito
                 </button>
+
             </article>
 
+            <!-- PRODUCTO 2: AUDÍFONOS -->
             <article class="producto">
-                <img src="imagenes/audifono.jpg"
-                     alt="Audífonos Bluetooth">
+
+                <img
+                    src="imagenes/audifono.jpg"
+                    alt="Audífonos Bluetooth"
+                >
 
                 <h3>Audífonos Bluetooth</h3>
+
                 <p>Disfruta tu música con comodidad.</p>
+
                 <h4>S/ 129.90</h4>
 
                 <button onclick="agregarCarrito('Audífonos Bluetooth', 129.90, 'AUD-002')">
                     🛒 Agregar al carrito
                 </button>
+
             </article>
 
+            <!-- PRODUCTO 3: SMARTWATCH -->
             <article class="producto">
-                <img src="imagenes/smartwatch.jpg"
-                     alt="Smartwatch">
+
+                <img
+                    src="imagenes/smartwatch.jpg"
+                    alt="Smartwatch"
+                >
 
                 <h3>Smartwatch</h3>
+
                 <p>Un reloj inteligente para tu día a día.</p>
+
                 <h4>S/ 159.90</h4>
 
                 <button onclick="agregarCarrito('Smartwatch', 159.90, 'SMART-003')">
                     🛒 Agregar al carrito
                 </button>
+
             </article>
 
         </section>
 
-        <div id="mensaje" role="status" aria-live="polite"></div>
+        <!-- MENSAJES DEL CARRITO -->
+        <div
+            id="mensaje"
+            role="status"
+            aria-live="polite">
+        </div>
 
+        <!-- RESUMEN DEL CARRITO -->
         <section class="resumen-carrito">
+
             <h2>Resumen de tu carrito</h2>
-            <p>Productos agregados: <span id="cantidad">0</span></p>
-            <h3>Total: S/ <span id="total">0.00</span></h3>
-            <button class="btn-vaciar" onclick="vaciarCarrito()">
+
+            <p>
+                Productos agregados:
+                <span id="cantidad">0</span>
+            </p>
+
+            <h3>
+                Total: S/
+                <span id="total">0.00</span>
+            </h3>
+
+            <button
+                class="btn-vaciar"
+                onclick="vaciarCarrito()">
                 Vaciar carrito
             </button>
+
         </section>
+
     </main>
 
     <footer>
@@ -93,6 +156,8 @@
         <p>Aplicación web con Google Analytics 4</p>
     </footer>
 
+    <!-- FUNCIONES DEL CARRITO -->
     <script src="script.js"></script>
+
 </body>
 </html>
